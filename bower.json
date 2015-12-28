@@ -1,0 +1,25 @@
+{
+  "name": "h5-app",
+  "description": "h5 app",
+  "main": "index.js",
+  "authors": [
+    "Vitrum <vitrum.cn@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "node_modules",
+    "package.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "framework7": "~1.2.0"
+  }
+}
