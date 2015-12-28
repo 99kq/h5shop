@@ -38,7 +38,7 @@ var commentModule = {
         }
 
         var output = appFunc.renderTpl(popupTpl, renderData);
-        hiApp.popup(output);
+        H5Shop.popup(output);
 
         var bindings = [{
             element:'#commentBtn',
@@ -52,15 +52,15 @@ var commentModule = {
         var text = $$('#commentText').val();
 
         if(appFunc.getCharLength(text) < 4){
-            hiApp.alert(i18n.index.err_text_too_short);
+            H5Shop.alert(i18n.index.err_text_too_short);
             return false;
         }
 
-        hiApp.showPreloader(i18n.comment.commenting);
+        H5Shop.showPreloader(i18n.comment.commenting);
 
         setTimeout(function(){
-            hiApp.hidePreloader();
-            hiApp.closeModal('.comment-popup');
+            H5Shop.hidePreloader();
+            H5Shop.closeModal('.comment-popup');
 
             //Refresh comment content
         },1500);
@@ -88,7 +88,7 @@ var commentModule = {
         ];
 
         var groups = [buttons1, buttons2];
-        hiApp.actions(groups);
+        H5Shop.actions(groups);
     }
 };
 

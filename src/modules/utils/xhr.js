@@ -44,9 +44,9 @@ module.exports = {
             var network = networkStatus.checkConnection();
             if(network === 'NoNetwork'){
 
-                hiApp.alert(i18n.error.no_network,function(){
-                    hiApp.hideIndicator();
-                    hiApp.hidePreloader();
+                H5Shop.alert(i18n.error.no_network,function(){
+                    H5Shop.hideIndicator();
+                    H5Shop.hidePreloader();
                 });
 
                 return false;
@@ -74,9 +74,9 @@ module.exports = {
 
                 }else{
 
-                    hiApp.alert(codeLevel.message,function(){
-                        hiApp.hideIndicator();
-                        hiApp.hidePreloader();
+                    H5Shop.alert(codeLevel.message,function(){
+                        H5Shop.hideIndicator();
+                        H5Shop.hidePreloader();
                     });
                 }
             }

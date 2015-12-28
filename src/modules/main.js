@@ -70,7 +70,7 @@ var app = {
         });
 
         window.$$ = Dom7;
-        window.hiApp = new Framework7({
+        window.H5Shop = new Framework7({
             pushState: false,
             popupCloseByOutside:false,
             animateNavBackIcon: true,
@@ -106,15 +106,15 @@ var app = {
             }
         });
 
-        window.homeF7View = hiApp.addView('#homeView', {
+        window.homeF7View = H5Shop.addView('#homeView', {
             dynamicNavbar: true
         });
 
-        hiApp.addView('#contactView', {
+        H5Shop.addView('#contactView', {
             dynamicNavbar: true
         });
 
-        hiApp.addView('#settingView', {
+        H5Shop.addView('#settingView', {
             dynamicNavbar: true
         });
 

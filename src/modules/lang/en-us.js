@@ -1,6 +1,6 @@
 module.exports = {
     app: {
-        name: 'HiApp'
+        name: 'H5Shop'
     },
     global: {
         cancel: 'Cancel',

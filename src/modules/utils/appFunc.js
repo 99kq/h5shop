@@ -32,11 +32,11 @@ module.exports = {
     },
 
     hideToolbar: function() {
-        hiApp.hideToolbar('.toolbar');
+        H5Shop.hideToolbar('.toolbar');
     },
 
     showToolbar: function() {
-        hiApp.showToolbar('.toolbar');
+        H5Shop.showToolbar('.toolbar');
     },
 
     timeFormat: function(ms){
