@@ -3,12 +3,25 @@
     "err_msg": "success",
     "data": [
         {
-            "id": "41",
-            "nickname":"Bob Brown",
-            "avatar":"1",
-            "text": "Behind every successful man there's a lot u unsuccessful years. http://goo.gl/",
-            "original_pic": "",
-            "created_at": "1404709434"
+            "id": 632910392,
+            "title": "New product title",
+            "published": true,
+            "description": "A mystery!",
+            "body_html": "<strong>Good snowboard!<\/strong>",
+            "vendor": "Burton",
+            "product_type": "Snowboard",
+            "variants": [
+              {
+                "option1": "First",
+                "price": "10.00",
+                "sku": 123
+              },
+              {
+                "option1": "Second",
+                "price": "20.00",
+                "sku": "123"
+              }
+            ]
         }
     ]
 }

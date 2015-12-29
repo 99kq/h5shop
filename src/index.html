@@ -49,6 +49,43 @@
         </div>
 
     </div>
+    <div id="productView" class="view view-main tab active">
+        <div class="navbar">
+            <div class="navbar-inner">
+
+                <div class="left">
+                    <a href="#"  class="refresh-click link">
+                        <i class="icon ios7-reload"></i>
+                    </a>
+                </div>
+
+                <div class="center sliding " >商品</div>
+
+                <div class="right">
+                    <a href="#" class="open-send-popup link icon-only">
+                        <i class="icon ios7-compose-outline"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="pages navbar-through">
+            <div data-page="productView" class="page no-swipeback">
+                <div data-distance="50" class="page-content pull-to-refresh-content infinite-scroll">
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                    <div class="load-result"></div>
+                    <div class="product-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div id="contactView" class="view tab">
 
@@ -104,7 +141,10 @@
                 <i class="icon ios7-home-outline"></i>
                 <span class="tabbar-label i18n" data-i18n="index.tweet"></span>
             </a>
-
+            <a href="#productView" class="tab-link">
+                <i class="icon ios7-chatbubble-outline"></i>
+                <span class="tabbar-label i18n" data-i18n="index.product"></span>
+            </a>
             <a href="#contactView" class="tab-link">
                 <i class="icon ios7-chatbubble-outline"></i>
                 <span class="tabbar-label i18n" data-i18n="index.contacts"></span>

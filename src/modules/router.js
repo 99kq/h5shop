@@ -23,7 +23,7 @@ module.exports = {
         var name = page.name;
         var from = page.from;
 
-        if(name === 'homeView' || name === 'contactView' || name === 'setting' ){
+        if(name === 'homeView' || name === 'productView' || name === 'contactView' || name === 'setting' ){
             if(from === 'left'){
                 appFunc.showToolbar();
             }

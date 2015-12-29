@@ -110,6 +110,10 @@ var app = {
             dynamicNavbar: true
         });
 
+        H5Shop.addView('#productView', {
+            dynamicNavbar: true
+        });
+
         H5Shop.addView('#contactView', {
             dynamicNavbar: true
         });

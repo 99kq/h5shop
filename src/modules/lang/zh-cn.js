@@ -20,9 +20,10 @@ module.exports = {
     index: {
         nothing_found: '未有匹配结果',
         nothing_loaded:'没有加载到新动态',
-        tweet: '动态',
-        contacts: '联系人',
+        tweet: '首页',
+        contacts: '订单',
         setting: '设置',
+        product: '商品',
         sen_tweet: '发动态',
         send_placeholder: '呃...说点什么吧？',
         sending:'正在发送中...',
