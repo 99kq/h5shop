@@ -132,6 +132,8 @@ var product = {
                 return appFunc.timeFormat(this.created_at);
             }
         };
+        console.log(template);
+        console.log(renderData);
         var output = appFunc.renderTpl(template, renderData);
         if(type === 'prepend'){
             $$('#productView').find('.product-list').prepend(output);
