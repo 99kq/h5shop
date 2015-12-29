@@ -1,20 +1,52 @@
-{{#list}}
-<div data-id="{{id}}" class="card ks-facebook-card">
-    <div class="card-header">
-        <div class="ks-facebook-avatar" data-avatar-id="{{avatar}}"><img src="http://lorempixel.com/68/68/people/{{avatar}}/" width="34" height="34"></div>
-        <div class="ks-facebook-name">{{nickname}}</div>
-        <div class="ks-facebook-date" data-time="{{created_at}}">{{../time}}</div>
+<div class="page-content">
+    <div class="setting-page list-block">
+        <ul>
+            <li>
+                <div class="item-content">
+                    <div class="item-inner user-info">
+                        <div class="avatar">
+                            <img src="{{avatarUrl}}" alt="">
+                        </div>
+                        <div class="user-detail">
+                            <div class="name">{{t i18n="setting.nickname"}}: {{nickName}}</div>
+                            <div class="point">{{t i18n="setting.points"}}: {{points}}</div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="page/feedback.html" class="item-link">
+                    <div class="item-content">
+                        <div class="item-media feedback spring"></div>
+                        <div class="item-inner">
+                            <div class="item-title">{{t i18n="setting.feed_back"}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="page/language.html?from=setting" class="item-link">
+                    <div class="item-content">
+                        <div class="item-media language">
+                            <i class="icon ios7-world-outline"></i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">{{t i18n="global.language"}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="page/about.html" class="item-link">
+                    <div class="item-content">
+                        <div class="item-media about spring"></div>
+                        <div class="item-inner">
+                            <div class="item-title">{{t i18n="setting.about"}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="button button-big logout-button button-fill color-red">{{t i18n="setting.login_out"}}</a>
     </div>
-    <div class="card-content">
-        <div class="card-content-inner">
-            <p>{{../finalText}}</p>
-            {{#if original_pic}}
-            <div class="item-image">
-                <img src="{{original_pic}}" width="100%" class="">
-            </div>
-            {{/if}}
-        </div>
-    </div>
-    <div class="card-footer"><a href="#" class="link">{{t i18n="timeline.forward"}}</a><a href="#" class="link">{{t i18n="timeline.comment"}}</a><a href="#" class="link">{{t i18n="timeline.like"}}</a></div>
 </div>
-{{/list}}
