@@ -3,7 +3,7 @@ var xhr = require('../utils/xhr');
 module.exports = {
     getList: function(callback){
         xhr.simpleCall({
-            func:'timeline'
+            func:'product'
         },function(res){
             callback(res.data);
         });

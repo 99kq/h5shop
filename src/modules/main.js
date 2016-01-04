@@ -106,13 +106,13 @@ var app = {
             }
         });
 
-        window.homeF7View = H5Shop.addView('#homeView', {
+        window.homeF7View = H5Shop.addView('#productView', {
             dynamicNavbar: true
         });
 
-        H5Shop.addView('#productView', {
-            dynamicNavbar: true
-        });
+        // H5Shop.addView('#productView', {
+        //     dynamicNavbar: true
+        // });
 
         H5Shop.addView('#contactView', {
             dynamicNavbar: true

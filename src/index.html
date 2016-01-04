@@ -12,7 +12,7 @@
 <div class="panel-overlay"></div>
 
 <div class="views tabs toolbar-through">
-    <div id="homeView" class="view view-main tab active">
+<!--     <div id="homeView" class="view  tab ">
         <div class="navbar">
             <div class="navbar-inner">
 
@@ -48,19 +48,48 @@
             </div>
         </div>
 
-    </div>
-    <div id="productView" class="view tab">
+    </div> -->
+    <div id="productView" class="view tab  view-main active">
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="center sliding i18n" data-i18n="index.product"></div>
-            </div>
-        </div>
-        <div class="pages navbar-through">
-            <div data-page="product" class="page">
-                product
-            </div>
-        </div>
 
+                <div class="left">
+                    <a href="#"  class="refresh-click link">
+                        <i class="icon ios7-reload"></i>
+                    </a>
+                </div>
+
+                <div class="center sliding i18n" data-i18n="app.product">商品</div>
+
+                <div class="right">
+                    <a href="#" class="open-send-popup link icon-only">
+                        <i class="icon ios7-compose-outline"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+<!--         <div class="pages navbar-through">
+            <div data-page="product" class="page">
+                <div class="home-timeline">
+
+                </div>
+            </div>
+        </div> -->
+        <div class="pages navbar-through  view-main active">
+            <div data-page="product" class="page no-swipeback">
+                <div data-distance="50" class="page-content pull-to-refresh-content infinite-scroll">
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                    <div class="load-result"></div>
+                    <div class="product-list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="contactView" class="view tab">
@@ -113,10 +142,14 @@
     <!-- toolbar start -->
     <div class="toolbar tabbar tabbar-labels">
         <div class="toolbar-inner">
-            <a href="#homeView" class="tab-link active">
+            <a href="#productView" class="tab-link">
+                <i class="icon ios7-chatbubble-outline"></i>
+                <span class="tabbar-label i18n" data-i18n="index.product"></span>
+            </a>
+<!--             <a href="#homeView" class="tab-link active">
                 <i class="icon ios7-home-outline"></i>
                 <span class="tabbar-label i18n" data-i18n="index.tweet"></span>
-            </a>
+            </a> -->
             <a href="#contactView" class="tab-link">
                 <i class="icon ios7-chatbubble-outline"></i>
                 <span class="tabbar-label i18n" data-i18n="index.contacts"></span>
@@ -126,10 +159,7 @@
                 <i class="icon ios7-gear-outline"></i>
                 <span class="tabbar-label i18n" data-i18n="index.setting"></span>
             </a>
-            <a href="#productView" class="tab-link">
-                <i class="icon ios7-chatbubble-outline"></i>
-                <span class="tabbar-label i18n" data-i18n="index.product"></span>
-            </a>
+
 
         </div>
     </div>

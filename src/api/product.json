@@ -4,12 +4,37 @@
     "data": [
         {
             "id": 632910392,
-            "title": "New product title",
+            "title": "本熹珍品 紫薯花生 坚果炒货 休闲零食 送礼罐装180g*1",
             "published": true,
-            "description": "A mystery!",
+            "description": "本熹珍品 紫薯花生 坚果炒货 休闲零食 送礼罐装180g*1本熹珍品 紫薯花生 坚果炒货 休闲零食 送礼罐装180g*1本熹珍品 紫薯花生 坚果炒货 休闲零食 送礼罐装180g*1",
             "body_html": "<strong>Good snowboard!<\/strong>",
             "vendor": "Burton",
+            "original_pic": "http://images.bbc.shopex123.com/images/1c/bd/d1/9c996b7de4f2ca189dc84c3726fb49baee855945.jpg_l.jpg",
             "product_type": "Snowboard",
+            "price":"444",
+            "variants": [
+              {
+                "option1": "First",
+                "price": "10.00",
+                "sku": 123
+              },
+              {
+                "option1": "Second",
+                "price": "20.00",
+                "sku": "123"
+              }
+            ]
+        },
+        {
+            "id": 632910393,
+            "title": "美特斯邦威2015冬装新款男数字印花套头卫衣",
+            "published": true,
+            "description": "美特斯邦威2015冬装新款男数字印花套头卫衣美特斯邦威2015冬装新款男数字印花套头卫衣美特斯邦威2015冬装新款男数字印花套头卫衣美特斯邦威2015冬装新款男数字印花套头卫衣",
+            "body_html": "<strong>Good snowboard!<\/strong>",
+            "vendor": "Burton",
+            "original_pic": "http://images.bbc.shopex123.com/images/54/6c/ab/99a1e918a7600b0c06d2935a19fdfcf904e45806.jpg_l.jpg",
+            "product_type": "Snowboard",
+            "price":"999.99",
             "variants": [
               {
                 "option1": "First",

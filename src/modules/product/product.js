@@ -1,50 +1,63 @@
 require('./product.less');
 
-var appFunc = require('../utils/appFunc'),
-    template = require('./product.tpl.html');
+var service = require('./service'),
+    appFunc = require('../utils/appFunc'),
+    template = require('./product.tpl.html'),
+    inputModule = require('../input/input');
 
 var productView = {
     init: function(){
+        console.log("can show?");
+        productView.getProductList();
         productView.bindEvents();
-        // console.log("bindEvents productView");
-    },
-    renderProduct: function(){
-        if($$('#productView .page-content')[0]) return;
 
+    },
+    getProductList: function(){
         H5Shop.showIndicator();
+        service.getList(function(tl){
+            
+            console.log(tl);
+            productView.renderProductList(tl);
 
-        var renderData = {
-            avatarUrl: 'http://lorempixel.com/68/68/people/7/',
-            nickName: 'H5Shop',
-            points: '100'
-        };
+            H5Shop.hideIndicator();
 
-        var output = appFunc.renderTpl(template, renderData);
-        $$('#productView .page[data-page="product"]').html(output);
-
-        H5Shop.hideIndicator();
-    },
-    logOut: function(){
-        H5Shop.confirm(i18n.product.confirm_logout,function(){
-            mainView.router.loadPage('page/login.html');
-            H5Shop.showTab('#ourView');
+            //Unlock scroll loading status
+            var ptrContent = $$('#productView').find('.pull-to-refresh-content');
+            ptrContent.data('scrollLoading','unloading');
         });
     },
+    renderProductList: function(tl, type){
+        var renderData = {
+            product: tl,
+            finalText: function(){
+                return appFunc.matchUrl(this.text);
+            },
+            time: function(){
+                return appFunc.timeFormat(this.created_at);
+            }
+        };
+        var output = appFunc.renderTpl(template, renderData);
+        console.log("render list.");
+        if(type === 'prepend'){
+            $$('#productView').find('.product-list').prepend(output);
+        }else if(type === 'append') {
+            $$('#productView').find('.product-list').append(output);
+        }else {
+            $$('#productView').find('.product-list').html(output);
+        }
+    },
     bindEvents: function(){
-        var bindings = [{
-            element: '#productView',
-            event: 'show',
-            handler: productView.renderProduct
-        },{
-            element: '#productView',
-            selector: '.logout-button',
-            event: 'click',
-            handler: productView.logOut
-        },{
+        var bindings = [
+        // {
+        //     element: '#productView',
+        //     event: 'show',
+        //     handler: productView.getProductList
+        // },
+        {
             element: '#productView',
             selector: '.update-button',
             event: 'click',
-            //handler: productView.checkVersion
+            handler: productView.checkVersion
         }];
         appFunc.bindEvents(bindings);
     }
